@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light p-3 border-bottom border-gray">
+  <p><strong>Simple Airbnb</strong></p>
+</nav>
+
+
+<div class="container">
+  <h1><%= @flat.name %></h1>
+    <img src="https://images.unsplash.com/photo-1632999101501-47bd016f7e46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" width="60%"/>
+      <p><%= @flat.address %></p>
+      <p>Price for one night: <%= @flat.price_per_night %></p>
+      <p>Number of Guests: <%= @flat.number_of_guests %></p>
+      <p><i class="fa-solid fa-arrow-rotate-left" style="color: #01060e;"></i>
+        <%= link_to "Return", flats_path %>
+      </p>
+</div>

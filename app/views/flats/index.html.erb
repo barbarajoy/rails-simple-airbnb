@@ -1,0 +1,29 @@
+<nav class="navbar navbar-light p-3 border-bottom border-gray">
+  <p><strong>Simple Airbnb</strong></p>
+</nav>
+
+<div class="container mt-3 align-items-center">
+  <h1>All Our Flats</h1>
+
+  <div class="card-container">
+    <% @flats.each do |flat| %>
+      <%= link_to flat_path(flat) do %>
+      <div class="card-flat">
+        <img src="https://images.unsplash.com/photo-1632999101501-47bd016f7e46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" />
+        <div class="card-flat-title">
+          <div>
+            <h2><%= flat.name %></h2>
+            <p><%= flat.address %></p>
+          </div>
+          <div class="card-flat-infos">
+              <i class="fa-solid fa-user fa-sm" style="color: #646464;"></i> <%= flat.number_of_guests %>
+              <i class="fa-solid fa-euro-sign fa-sm" style="color: #646464;"></i> <%= flat.price_per_night %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+
+
+</div>
